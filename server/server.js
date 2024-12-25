@@ -43,7 +43,6 @@ app.listen(4000, () => {
 
 app.use("/api/auth", authRoutes);
 
-
 app.use((err, req, res, next) => {
   req.log.error(err, "Unhandled error");
   const statusCode = err.statusCode || 500;
