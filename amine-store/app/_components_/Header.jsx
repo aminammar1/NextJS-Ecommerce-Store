@@ -32,6 +32,7 @@ import {
 } from "@heroicons/react/20/solid";
 
 import { Badge } from "@/components/ui/badge";
+import { ShoppingBag } from "lucide-react";
 
 const products = [
   {
@@ -96,38 +97,46 @@ export default function Header() {
           </button>
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-          <a href="#" className="text-md font-semibold leading-6 text-gray-900">
+          <a href="#" className="text-md font-bold leading-6 text-gray-900">
             Shop
           </a>
-          <a href="#" className="text-md font-semibold leading-6 text-gray-900">
+          <a href="#" className="text-md font-bold leading-6 text-gray-900">
             About
           </a>
-          <a href="#" className="text-md font-semibold leading-6 text-gray-900">
+          <a href="#" className="text-md font-bold leading-6 text-gray-900">
             Contact us
           </a>
         </PopoverGroup>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-4">
-          <a className="bg-gray-200 p-2 rounded-full">
-            <MagnifyingGlassIcon
-              width={22}
-              className=" cursor-pointer hover:scale-110 hover:transition-transform "
-            />
-          </a>
-          <a className="bg-gray-200 p-2 rounded-full">
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-3">
+          <div className="">
+            <a className="">
+              <MagnifyingGlassIcon
+                width={22}
+                className=" cursor-pointer hover:scale-110 hover:transition-transform "
+              />
+            </a>
+          </div>
+
+          <div className="">
+            <a className="">
+              <ShoppingBag
+                width={22}
+                className=" cursor-pointer hover:scale-110 hover:transition-transform "
+              />
+            </a>
+          </div>
+          <div className="">
+            <span className="bg-green-500 text-white p-1 px-2 rounded-full">
+              0
+            </span>
+          </div>
+
+          <div className="">
             <UserCircleIcon
-              width={22}
+              width={25}
               className=" cursor-pointer hover:scale-110 hover:transition-transform "
             />
-          </a>
-          <a className="bg-gray-200 p-2 rounded-full">
-            <ShoppingBagIcon
-              width={22}
-              className=" cursor-pointer hover:scale-110 hover:transition-transform "
-            />
-          </a>
-          <Badge className="px-3 py-1 text-md bg-green-500 text-white rounded-full">
-            0
-          </Badge>
+          </div>
         </div>
       </nav>
       <Dialog
